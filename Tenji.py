@@ -1,3 +1,4 @@
+import sys
 from typing import List
 
 class Tenji(object):
@@ -113,4 +114,7 @@ class Tenji(object):
         return result
 
 if __name__ == '__main__':
-    print(Tenji.kana_string_to_tenji('かなを　てんじに　へんかん　できる　つーる　です。'))
+    strs = sys.argv[1:]
+    for s in strs:
+        print(Tenji.kana_string_to_tenji(s))
+        print(s)
